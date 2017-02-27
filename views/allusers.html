@@ -1,0 +1,7 @@
+<div class="container" ng-controller="usersListController">
+  <div class="row">
+    <div class="col-md-4" ng-repeat="user in users| orderBy : 'name' track by $id(user)">
+      <userinfo></userinfo>  
+    </div>
+  </div>
+</div>

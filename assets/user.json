@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Manoj Kumar",
+        "email": "manoj@gmail.com",
+        "password": "1234",
+        "dob": "15/09/1986",
+        "phone": "12323235",
+        "address": "Mohali, Punjab, India, 123234"
+    },
+    {
+        "id": 2,
+        "name": "Anil Kumar",
+        "email": "manoj@gmail.com",
+        "password": "12342",
+        "dob": "15/09/1986",
+        "phone": "12323235",
+        "address": "Mohali, Punjab, India, 123234"
+    },
+    {
+        "id": 3,
+        "name": "Sunil Kumar",
+        "email": "manoj@gmail.com",
+        "password": "12234",
+        "dob": "15/09/1986",
+        "phone": "12323235",
+        "address": "Mohali, Punjab, India, 123234"
+    }
+]

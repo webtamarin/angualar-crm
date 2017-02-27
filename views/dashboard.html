@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="leftbar col-md-3">
+      <div class="profile-pic">
+        <img src="images/yeoman.png"/>
+        <div>Welcome {{name}}</div>
+      </div>
+    </div>
+    <div ng-controller="rightContentController" class="col-md-9">
+      <div class="col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">Profile</div>
+          <div class="panel-body">
+            <center>
+              <a href="javascript:void(0);" ng-click="profile()">
+              <h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span></h1>
+              <h3>View Profile</h3>
+              </a>
+            </center>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">Leaves</div>
+          <div class="panel-body">
+            <center>
+              <a href="javascript:void(0);" ng-click="apply_leave()">
+                <h1><span class="glyphicon glyphicon-plane" aria-hidden="true"></span></h1>
+                <h3>Apply Leaves</h3>
+              </a>
+            </center>            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">All Users</div>
+          <div class="panel-body">
+            <center>
+              <a href="javascript:void(0);" ng-click="allusers()">
+                <h1><span class="glyphicon glyphicon-plane" aria-hidden="true"></span></h1>
+                <h3>All Users</h3>
+              </a>
+            </center>            
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">Settings</div>
+          <div class="panel-body">
+            <center>
+              <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></h1>
+              <h3>Settings</h3>
+            </center>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

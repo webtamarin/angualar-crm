@@ -1,0 +1,42 @@
+<div class="container" ng-controller="loginFormController">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1 style="text-align: center;">Login</h1>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Login</h3>
+        </div>
+        <div class="panel-body">
+          <form name="loginForm" ng-submit="submit()">
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" name="email" placeholder="Email" required ng-model="email" ng-model-options="{updateOn: 'blur'}">
+              <span class="label label-danger" ng-show="!loginForm.email.$untouched && loginForm.email.$error.required">This is a required field</span>
+              <span class="label label-danger" ng-show="!loginForm.email.$untouched && loginForm.email.$error.email">Not valid email</span>
+            </div>
+            <div class="form-group">
+              <label for="pass">Password</label>
+              <input type="password" class="form-control" name="pass" placeholder="Password" required ng-model="pass" ng-model-options="{updateOn: 'blur'}">
+              <span class="label label-danger" ng-show="!loginForm.pass.$untouched && loginForm.pass.$error.required">This is a required field</span>
+            </div>                        
+            <div class="checkbox">
+              <label><input type="checkbox" name="remember" ng-model="remember"> Remember Me</label>
+            </div>
+            <input type="submit" class="btn btn-default btn-primary" ng-model="submitBtn" ng-disabled="loginForm.email.$error.required || loginForm.email.$error.email || loginForm.pass.$error.required" value="Submit"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="row">
+    <div class="col-md-12">
+      <ul>
+        <li><h3>Email entered by you is:<span class="label label-success" ng-bind="email"></span></h3></li>
+        <li><h3>Password entered by you is:<span class="label label-success" ng-bind="pass"></span></h3></li>
+        <li><h3>Remember me:<span class="label label-success" ng-bind="remember"></span></h3></li>
+      </ul>
+    </div>
+  </div>-->
+
+
+</div>

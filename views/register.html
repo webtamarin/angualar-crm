@@ -1,0 +1,69 @@
+<div class="container" ng-controller="registerFormController">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 style="text-align: center;">Register</h1>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Register</h3>
+        </div>
+        <div class="panel-body">
+          <form name="registerForm" ng-submit="submit()">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="" ng-model="name"/>
+                <span class="label label-danger" ng-show="!registerForm.name.$untouched && registerForm.name.$error.required">This is a required field</span>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required ng-model="email"/>
+                <span class="label label-danger" ng-show="!registerForm.email.$untouched && registerForm.email.$error.required">This is a required field</span>
+                <span class="label label-danger" ng-show="!registerForm.email.$untouched && registerForm.email.$error.email">Not valid email</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required ng-model="pass"/>
+                <span class="label label-danger" ng-show="!registerForm.password.$untouched && registerForm.password.$error.required">This is a required field</span>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="cpassword">Confirm password</label>
+                <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Confirm Password" required ng-model="cpass"/>
+                <span class="label label-danger" ng-show="!registerForm.cpassword.$untouched && registerForm.cpassword.$error.required">This is a required field</span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="phone"/>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="dob">Date of Birth</label>
+                <div class='input-group'>
+                  <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dob" is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                  <span class="input-group-btn" placeholder="Date of Birth">
+                    <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="address" name="address" placeholder="Address" ng-model="address"></textarea>
+              </div>                                    
+            </div>
+            <input type="submit" class="btn btn-default btn-primary" ng-model="submitBtn" ng-disabled="registerForm.name.$error.required || registerForm.email.$error.required || registerForm.email.$error.email || loginForm.pass.$error.required || loginForm.password.$error.required || loginForm.cpassword.$error.required" value="Submit"/>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">                    
+    </div>
+  </div>
+
+
+</div>
